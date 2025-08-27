@@ -1,31 +1,114 @@
-/* Import fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Playfair+Display:wght@400;600;700&family=Inconsolata:wght@300;500&display=swap');
 
-/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
+header .hd {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding: 20px 40px;
+    animation: fadeInUp 2s ease forwards;
+}
+
+header .hd h2 {
+    font-family: 'Inconsolata', monospace;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+    color: #f8e9d2;
+    opacity: 0;
+    animation: slideInDown 2s ease forwards 0.5s;
+}
+
+header .hd h1 {
+    font-family: 'Edu NSW ACT Cursive', cursive;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 200, 150, 0.8),
+        0 0 20px rgba(255, 180, 120, 0.6);
+    opacity: 0;
+    animation: fadeInScale 2.5s ease forwards 1s;
+}
+
+header .hd p {
+    font-style: italic;
+    font-size: 1.4rem;
+    color: #f5deb3;
+    letter-spacing: 2px;
+    opacity: 0;
+    animation: fadeInUp 2s ease forwards 1.8s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+header .hd h1:hover {
+    background: linear-gradient(90deg, #fff 20%, #f5deb3 40%, #fff 60%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+    to {
+        background-position: 200% center;
+    }
+}
+
 body {
     font-family: 'Playfair Display', serif;
     background-color: #f8f4f0;
-    /* soft cream */
     color: #2c2c2c;
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background: rgba(255, 255, 255, 0.85);
-    /* transparent look */
     backdrop-filter: blur(6px);
     display: flex;
     justify-content: center;
@@ -46,13 +129,11 @@ body {
     font-size: 16px;
     font-weight: 600;
     color: #4b2e2e;
-    /* deep brown */
     transition: color 0.3s ease;
 }
 
 .navbar ul li a:hover {
     color: #b85c38;
-    /* warm terracotta */
 }
 
 .navbar button {
@@ -73,17 +154,18 @@ body {
 .navbar button a {
     color: #fff;
 }
+
 .navbar button a:hover {
     color: #fff;
 }
-.overlay{
+
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
-    /* dark overlay for better text visibility */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -92,6 +174,7 @@ body {
     color: #fff;
     padding: 20px;
 }
+
 footer {
     text-align: center;
     padding: 20px;
