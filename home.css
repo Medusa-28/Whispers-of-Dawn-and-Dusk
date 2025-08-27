@@ -1,65 +1,104 @@
-@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
-*{
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Playfair+Display:wght@400;600;700&family=Inconsolata:wght@300;500&display=swap');
+
+/* Global Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
 }
-body{
-    background-color: mistyrose;
-    background-repeat: repeat;
-    background-image: url("/pictures/header.jpeg");
-    
+
+/* Body Styling */
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #f8f4f0;
+    /* soft cream */
+    color: #2c2c2c;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
-header{
-    color:chocolate;
-    text-align: center;
-    padding: 200px;
-    
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    /* transparent look */
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    padding: 15px 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
-.hd{
-     background-color: bisque;
-    font-family: 'Edu NSW ACT Cursive', 'Algerian', 'Open Sans', sans-serif;
-    font-style: normal;
-}
-#he{
-    font-family: 'Edu NSW ACT Cursive';
-    
-}
-#she{
-   font-family: 'Inconsolata' ;
-}
-.navbar{
-    background-color: aliceblue;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding-right: 15px;
-    padding-left: 15px;
-    }
-.navdiv{
+
+.navbar ul {
+    list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    li{
-    list-style: none;
-    display: inline-block;
-    }
-    li a{
-         font-size: 15px; font-weight: bold; margin-right: 25px;
-    }
-    button{
-        background-color:black;
-            }
-    button a{
-        color: aliceblue;
-        margin-right: 25px;
-        margin-left: 25px;
-    } 
+    gap: 25px;
 }
-footer{
-    color: aliceblue;
-    padding: 25px;
-    padding-top: 50px;
-    text-align: center;
 
-    }
-    
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #4b2e2e;
+    /* deep brown */
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #b85c38;
+    /* warm terracotta */
+}
+
+.navbar button {
+    background-color: #4b2e2e;
+    border: none;
+    padding: 8px 18px;
+    margin-left: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar button:hover {
+    background-color: #b85c38;
+    transform: scale(1.05);
+}
+
+.navbar button a {
+    color: #fff;
+}
+.navbar button a:hover {
+    color: #fff;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* dark overlay for better text visibility */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4b2e2e;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
