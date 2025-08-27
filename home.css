@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background-color: mistyrose;
+    background-repeat: repeat;
+    background-image: url("/pictures/header.jpeg");
+    
+}
+header{
+    color:chocolate;
+    text-align: center;
+    padding: 200px;
+    
+}
+.hd{
+     background-color: bisque;
+    font-family: 'Edu NSW ACT Cursive', 'Algerian', 'Open Sans', sans-serif;
+    font-style: normal;
+}
+#he{
+    font-family: 'Edu NSW ACT Cursive';
+    
+}
+#she{
+   font-family: 'Inconsolata' ;
+}
+.navbar{
+    background-color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-right: 15px;
+    padding-left: 15px;
+    }
+.navdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    li{
+    list-style: none;
+    display: inline-block;
+    }
+    li a{
+         font-size: 15px; font-weight: bold; margin-right: 25px;
+    }
+    button{
+        background-color:black;
+            }
+    button a{
+        color: aliceblue;
+        margin-right: 25px;
+        margin-left: 25px;
+    } 
+}
+footer{
+    color: aliceblue;
+    padding: 25px;
+    padding-top: 50px;
+    text-align: center;
+
+    }
+    
